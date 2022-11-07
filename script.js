@@ -1,8 +1,21 @@
 const gridXY = 16;
 
 const gridContainer = document.querySelector("#gridContainer");
+const createCustomGrid = document.querySelector("#createCustomGrid");
+
+createCustomGrid.addEventListener("click", gridUserInput);
 
 drawGrid(gridXY);
+
+function gridUserInput() {
+  let gridSize = prompt("Please pick a grid size between 1 and 100");
+  while (isNaN(gridSize) || gridSize > 100 || gridSize < 1) {
+    gridSize = prompt(
+      "Invalid grid size, please pick a grid size between 1 and 100"
+    );
+  }
+  drawGrid(gridSize);
+}
 
 function drawGrid(axisSize) {
   gridContainer.innerHTML = "";

@@ -1,19 +1,39 @@
 body {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  background-color: #a2d2ff;
+}
+
+h1 {
+  margin-bottom: 0;
 }
 
 .gridNode {
   height: 0;
   padding-bottom: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .selected {
   background-color: black;
 }
 
+button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffafcc;
+  color: black;
+  font-weight: bold;
+  border: 3px solid #cdb4db;
+}
+
 #gridContainer {
   display: grid;
   width: 500px;
-  border: 3px solid black;
+  max-width: 100%;
+  border: 5px solid #ffafcc;
+  background-color: #bde0fe;
 }
